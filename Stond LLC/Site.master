@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - Secret Nest Egg</title>
+    <title><%: Page.Title %> - Secret Nest Egg Sudognome</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -45,13 +45,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/"><font color="black"><b>Tip Tap Goal</b></font></a>
+                    <a class="navbar-brand" runat="server" href="~/"><font color="black"><b>Secret Nest Egg</b></font></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/"><font color="black"><b>Home</b></font></a></li>
                         <li><a runat="server" href="~/About"><font color="black"><b>About</b></font></a></li>
                         <li><a runat="server" href="~/Contact"><font color="black"><b>Contact</b></font></a></li>
+                        <li><a runat="server" href="~/Games"><font color="black"><b>Games</b></font></a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -73,6 +74,8 @@
             </div>
         </div>
         <div class="container body-content">
+            <asp:ContentPlaceHolder ID="HeaderContent" runat="server">
+            </asp:ContentPlaceHolder>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />

@@ -1,0 +1,21 @@
+﻿body {
+    background-clip: padding-box;
+    background-image: url("../../Pictures/Caps_Background.png");
+    background-size: cover;
+}
+
+
+#footer {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/
+    height: 40px;
+    background: grey;
+}
+
+twitter-timeline {
+    width: 500px;
+    height: 500px;
+}

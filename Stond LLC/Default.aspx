@@ -1,9 +1,19 @@
 ﻿<%@ Page Title="Home Page" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Default.aspx.vb" Inherits="_Default" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeaderContent" runat="server">
+<!-- Compressed CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
 
+<!-- Compressed JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+</asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-   <header>
-        <link href="/CSS/about.css" rel="stylesheet" type="text/css">
-    </header>
+    <style>
+        body {
+    background-clip: padding-box;
+    background-image: url("../../Pictures/Caps_Ice.png");
+    background-size: cover;
+}
+    </style>
 
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" nonce="ETlc03Ek"></script>
@@ -12,6 +22,9 @@
         .twitter-timeline {
             width:500px;
             height:500px;
+        }
+        .flip {
+          transform: rotateY(180deg); 
         }
     </style>
     
@@ -40,6 +53,36 @@
           });
         </script>
 
+    </div>
+
+    <div align="center">
+        <asp:Calendar id="calendar1" CssClass="Calendar" runat="server" SelectionMode="None" ShowGridLines="true" 
+                        ShowNextPrevMonth="True" ForeColor="Black" CaptionAlign="Left" DayStyle-CssClass="Day" TitleStyle-CssClass="Title"
+                        OnPreRender="calendar1_Prerender" OnDayRender="calendar_DayRender">
+            <DayHeaderStyle Height="1px" BackColor="Gray" ForeColor="Black"/>  
+            <DayStyle Height="150px" Width="200px" BackColor="White" ForeColor="Black" /> 
+            <NextPrevStyle Width="500px" ForeColor="Black" BackColor="White"/> 
+            <OtherMonthDayStyle/>  
+            <SelectedDayStyle/>  
+            <SelectorStyle/>  
+            <TitleStyle/>  
+            <TodayDayStyle BackColor="Yellow" ForeColor="Blue" /> 
+            <WeekendDayStyle/>
+        </asp:Calendar>
+    </div>
+
+    <div class="grid-x grid-padding-x">
+        <div class="medium-3">
+            <img src="Pictures/FEMN_Wyvern.png" CssClass="flip"/>
+        </div>
+    
+        <div class="medium-6" align="center">
+            
+        </div>
+
+        <div class="medium-3">
+            <img src="Pictures/FEMN_Wyvern.png" />
+        </div>
     </div>
 
 <div class="">&nbsp;</div>
