@@ -11,7 +11,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <%--<webopt:bundlereference runat="server" path="~/Content/css" />--%>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="~/CSS/master.css" rel="stylesheet" type="text/css">
 </head>
@@ -36,7 +36,7 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
+        
         <div class="navbar navbar-inverse navbar-fixed-top" id="navBar">
             <div class="container">
                 <div class="navbar-header">
@@ -50,20 +50,20 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/"><font color="black"><b>Home</b></font></a></li>
-                        <li><a runat="server" href="~/About"><font color="black"><b>About</b></font></a></li>
-                        <li><a runat="server" href="~/Contact"><font color="black"><b>Contact</b></font></a></li>
-                        <li><a runat="server" href="~/Games"><font color="black"><b>Games</b></font></a></li>
+                        <li><a runat="server" href="~/About.aspx"><font color="black"><b>About</b></font></a></li>
+                        <li><a runat="server" href="~/Contact.aspx"><font color="black"><b>Contact</b></font></a></li>
+                        <li><a runat="server" href="~/Games.aspx"><font color="black"><b>Games</b></font></a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register"><font color="black"><b>Register</b></font></a></li>
-                                <li><a runat="server" href="~/Account/Login"><font color="black"><b>Log in</b></font></a></li>
+                                <li><a runat="server" href="~/Account/Register.aspx"><font color="black"><b>Register</b></font></a></li>
+                                <li><a runat="server" href="~/Account/Login.aspx"><font color="black"><b>Log in</b></font></a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Salve, <%: Context.User.Identity.GetUserName()  %>!</a></li>
+                                <li><a runat="server" href="~/Account/Manage.aspx" title="Manage your account">Salve, !</a></li>
                                 <li>
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>

@@ -2,24 +2,26 @@
 Imports Microsoft.Owin.Security
 Imports Microsoft.AspNet.Identity
 
+
 ' You can add profile data for the user by adding more properties to your User class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
 Public Class ApplicationUser
-    Inherits IdentityUser
+    'Inherits IdentityUser
+    Dim Users_Key As Integer
 
 End Class
 
 Public Class ApplicationDbContext
-    Inherits IdentityDbContext(Of ApplicationUser)
+    Inherits ApplicationUser
     Public Sub New()
-        MyBase.New("DefaultConnection")
+        'MyBase.New("DefaultConnection")
     End Sub
 End Class
 
 #Region "Helpers"
 Public Class UserManager
-    Inherits UserManager(Of ApplicationUser)
+    Inherits ApplicationUser
     Public Sub New()
-        MyBase.New(New UserStore(Of ApplicationUser)(New ApplicationDbContext()))
+        'MyBase.New(New UserStore(Of ApplicationUser)(New ApplicationDbContext()))
     End Sub
 End Class
 Public Class IdentityHelper
@@ -27,10 +29,10 @@ Public Class IdentityHelper
     Public Const XsrfKey As String = "xsrfKey"
 
     Public Shared Sub SignIn(manager As UserManager, user As ApplicationUser, isPersistent As Boolean)
-        Dim authenticationManager As IAuthenticationManager = HttpContext.Current.GetOwinContext().Authentication
-        authenticationManager.SignOut(DefaultAuthenticationTypes.ExternalCookie)
-        Dim identity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie)
-        authenticationManager.SignIn(New AuthenticationProperties() With {.IsPersistent = isPersistent}, identity)
+        'Dim authenticationManager As IAuthenticationManager = HttpContext.Current.GetOwinContext().Authentication
+        'authenticationManager.SignOut(DefaultAuthenticationTypes.ExternalCookie)
+        'Dim identity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie)
+        'authenticationManager.SignIn(New AuthenticationProperties() With {.isPersistent = isPersistent}, identity)
     End Sub
 
     Public Const ProviderNameKey As String = "providerName"

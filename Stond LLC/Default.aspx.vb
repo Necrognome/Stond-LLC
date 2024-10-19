@@ -50,188 +50,188 @@ Partial Class _Default
         End If
 
         'Dim Activity_Key As String
-        'Dim Activity_Count As Integer
+        Dim Activity_Count As Integer
 
-        'Activity_Count = dtCalendar.Rows.Count - 1
+        Activity_Count = dtCalendar.Rows.Count - 1
 
-        'For l As Integer = 0 To Activity_Count
-        '    If e.Day.Date = CDate(dtCalendar.Rows(l).Item("Date")).ToString("yyyy-MM-dd") Then
+        For l As Integer = 0 To Activity_Count
+            If e.Day.Date = CDate(dtCalendar.Rows(l).Item("Date")).ToString("yyyy-MM-dd") Then
 
-        '        Dim Activity_Name As String = dtCalendar.Rows(l).Item("Activity").ToString
-        '        Dim Activity_Time_Frame As String = dtCalendar.Rows(l).Item("Time_Frame").ToString
-        '        Dim LK_Activity_Key As String = dtCalendar.Rows(l).Item("LK_Activity_Key").ToString
+                Dim Calendar_Type As String = dtCalendar.Rows(l).Item("Calendar_Type").ToString
+                Dim Description As String = dtCalendar.Rows(l).Item("Description").ToString
+                Dim LK_Activity_Key As String = dtCalendar.Rows(l).Item("Calendar_Type").ToString
 
-        '        If cbView_All.Checked = True Then
-        '            cbAE.Checked = False
-        '            cbEL.Checked = False
-        '            cbAS.Checked = False
-        '            cbCC.Checked = False
-        '            cbCP.Checked = False
-        '            cbDV.Checked = False
-        '            cbELS.Checked = False
-        '            cbHA.Checked = False
-        '            cbLE.Checked = False
-        '            cbPSFL.Checked = False
-        '            cbSTEM.Checked = False
-        '            cbSI.Checked = False
-        '            cbTT.Checked = False
-        '            cbWR.Checked = False
-        '            e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '        End If
+                '        If cbView_All.Checked = True Then
+                '            cbAE.Checked = False
+                '            cbEL.Checked = False
+                '            cbAS.Checked = False
+                '            cbCC.Checked = False
+                '            cbCP.Checked = False
+                '            cbDV.Checked = False
+                '            cbELS.Checked = False
+                '            cbHA.Checked = False
+                '            cbLE.Checked = False
+                '            cbPSFL.Checked = False
+                '            cbSTEM.Checked = False
+                '            cbSI.Checked = False
+                '            cbTT.Checked = False
+                '            cbWR.Checked = False
+                '            e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '        End If
 
-        '        If cbAE.Checked = True Then
-        '            If LK_Activity_Key = 1 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbAE.Checked = True Then
+                If LK_Activity_Key = 1 Then
+                    e.Cell.Controls.Add(New LiteralControl("<br/>" + Description))
+                End If
+                '        End If
 
-        '        If cbEL.Checked = True Then
-        '            If LK_Activity_Key = 2 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbEL.Checked = True Then
+                '            If LK_Activity_Key = 2 Then
+                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '            End If
+                '        End If
 
-        '        If cbAS.Checked = True Then
-        '            If LK_Activity_Key = 3 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbAS.Checked = True Then
+                '            If LK_Activity_Key = 3 Then
+                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '            End If
+                '        End If
 
-        '        If cbCC.Checked = True Then
-        '            If LK_Activity_Key = 4 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbCC.Checked = True Then
+                '            If LK_Activity_Key = 4 Then
+                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '            End If
+                '        End If
 
-        '        If cbCP.Checked = True Then
-        '            If LK_Activity_Key = 5 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbCP.Checked = True Then
+                '            If LK_Activity_Key = 5 Then
+                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '            End If
+                '        End If
 
-        '        If cbDV.Checked = True Then
-        '            If LK_Activity_Key = 6 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbDV.Checked = True Then
+                '            If LK_Activity_Key = 6 Then
+                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '            End If
+                '        End If
 
-        '        If cbELS.Checked = True Then
-        '            If LK_Activity_Key = 7 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbELS.Checked = True Then
+                '            If LK_Activity_Key = 7 Then
+                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '            End If
+                '        End If
 
-        '        If cbHA.Checked = True Then
-        '            If LK_Activity_Key = 8 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbHA.Checked = True Then
+                '            If LK_Activity_Key = 8 Then
+                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '            End If
+                '        End If
 
-        '        If cbLE.Checked = True Then
-        '            If LK_Activity_Key = 9 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbLE.Checked = True Then
+                '            If LK_Activity_Key = 9 Then
+                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '            End If
+                '        End If
 
-        '        If cbPSFL.Checked = True Then
-        '            If LK_Activity_Key = 10 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbPSFL.Checked = True Then
+                '            If LK_Activity_Key = 10 Then
+                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '            End If
+                '        End If
 
-        '        If cbSTEM.Checked = True Then
-        '            If LK_Activity_Key = 11 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbSTEM.Checked = True Then
+                '            If LK_Activity_Key = 11 Then
+                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '            End If
+                '        End If
 
-        '        If cbSI.Checked = True Then
-        '            If LK_Activity_Key = 12 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbSI.Checked = True Then
+                '            If LK_Activity_Key = 12 Then
+                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '            End If
+                '        End If
 
-        '        If cbTT.Checked = True Then
-        '            If LK_Activity_Key = 13 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbTT.Checked = True Then
+                '            If LK_Activity_Key = 13 Then
+                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '            End If
+                '        End If
 
-        '        If cbWR.Checked = True Then
-        '            If LK_Activity_Key = 14 Then
-        '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-        '            End If
-        '        End If
+                '        If cbWR.Checked = True Then
+                '            If LK_Activity_Key = 14 Then
+                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
+                '            End If
+                '        End If
 
-        '        Activity_Key = dtCalendar.Rows(l).Item("LK_Activity_Key").ToString
-        '        If Activity_Key = 1 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
+                Calendar_Type = dtCalendar.Rows(l).Item("Calendar_Type").ToString
+                If Calendar_Type = 1 Then
+                    e.Cell.BackColor = System.Drawing.Color.Red
+                    e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                End If
 
-        '        If Activity_Key = 2 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
-        '        If Activity_Key = 3 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
-        '        If Activity_Key = 4 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
-        '        If Activity_Key = 5 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
+                '        If Activity_Key = 2 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
+                '        If Activity_Key = 3 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
+                '        If Activity_Key = 4 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
+                '        If Activity_Key = 5 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
 
-        '        If Activity_Key = 6 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
-        '        If Activity_Key = 7 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
-        '        If Activity_Key = 8 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
-        '        If Activity_Key = 9 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
+                '        If Activity_Key = 6 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
+                '        If Activity_Key = 7 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
+                '        If Activity_Key = 8 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
+                '        If Activity_Key = 9 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
 
-        '        If Activity_Key = 10 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
+                '        If Activity_Key = 10 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
 
-        '        If Activity_Key = 11 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
+                '        If Activity_Key = 11 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
 
-        '        If Activity_Key = 12 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
-        '        If Activity_Key = 13 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
-        '        If Activity_Key = 14 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
+                '        If Activity_Key = 12 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
+                '        If Activity_Key = 13 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
+                '        If Activity_Key = 14 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
 
-        '        If Activity_Key = 14 Then
-        '            e.Cell.ForeColor = System.Drawing.Color.Black
-        '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-        '        End If
-        '    End If
-        'Next
+                '        If Activity_Key = 14 Then
+                '            e.Cell.ForeColor = System.Drawing.Color.Black
+                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                '        End If
+            End If
+        Next
 
     End Sub
 
