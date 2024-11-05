@@ -2,6 +2,7 @@
     background-clip: padding-box;
     background-image: url("../../Pictures/Caps_Ice.png");
     background-size: cover;
+    scroll-padding-top: 10%;
 }
 
 

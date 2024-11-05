@@ -86,9 +86,9 @@ Partial Class _Default
                 '        End If
 
                 '        If cbEL.Checked = True Then
-                '            If LK_Activity_Key = 2 Then
-                '                e.Cell.Controls.Add(New LiteralControl("<br/>" + Activity_Name + " " + Activity_Time_Frame))
-                '            End If
+                If LK_Activity_Key = 2 Then
+                    e.Cell.Controls.Add(New LiteralControl("<br/>" + Description))
+                End If
                 '        End If
 
                 '        If cbAS.Checked = True Then
@@ -165,14 +165,14 @@ Partial Class _Default
 
                 Calendar_Type = dtCalendar.Rows(l).Item("Calendar_Type").ToString
                 If Calendar_Type = 1 Then
-                    e.Cell.BackColor = System.Drawing.Color.Red
+                    e.Cell.BackColor = System.Drawing.Color.DarkSeaGreen
                     e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
                 End If
 
-                '        If Activity_Key = 2 Then
-                '            e.Cell.ForeColor = System.Drawing.Color.Black
-                '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
-                '        End If
+                If Calendar_Type = 2 Then
+                    e.Cell.ForeColor = System.Drawing.Color.AntiqueWhite
+                    e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString
+                End If
                 '        If Activity_Key = 3 Then
                 '            e.Cell.ForeColor = System.Drawing.Color.Black
                 '            e.Cell.ToolTip = dtCalendar.Rows(l).Item("Description").ToString

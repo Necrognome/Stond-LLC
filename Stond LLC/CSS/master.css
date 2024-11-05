@@ -1,8 +1,17 @@
-﻿#navBar {
-    background-color: powderblue;
-    font: bold, Undead;
+﻿body {
+    padding-top: 65px;
+}
+
+#navBar {
+    background-color: purple;
+    font-family: Undead;
     font-palette: dark;
-    float: right;
+    
+}
+
+#navBar ul, #navBar li {
+    margin-left: 1px;
+    padding-left: 3px;
 }
 
 .footer {
